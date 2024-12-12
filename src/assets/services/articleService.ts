@@ -15,9 +15,9 @@ export interface Article {
     return data.articles
    
  }
- console.log (fetchArticles(data))
  
- export const fetchArticlesID = async (id:): Promise<Article[]>=> {
+ 
+ export const fetchArticlesID = async (id:string): Promise<Article[]>=> {
     const res = await fetch (`https://api.spaceflightnewsapi.net/v4/articles/${id}`)
     if (!res.ok){
         throw new Error ('Sad')
